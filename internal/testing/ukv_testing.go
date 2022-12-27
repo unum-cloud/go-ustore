@@ -1,6 +1,7 @@
 package ukv_testing
 
 import (
+	"os"
 	"testing"
 )
 
@@ -14,8 +15,11 @@ type dataBase interface {
 	Contains(uint64) (bool, error)
 }
 
-func DataBaseSimpleTest(db dataBase, t *testing.T) {
-	if err := db.ReConnect("./tmp"); err != nil {
+func DataBaseSimpleTest(db dataBase, path string, t *testing.T) {
+	os.RemoveAll(path)
+	os.MkdirAll(path, os.FileMode(0777))
+
+	if err := db.ReConnect(path); err != nil {
 		t.Fatalf("Couldn't open db: %s", err)
 	}
 
@@ -33,8 +37,8 @@ func DataBaseSimpleTest(db dataBase, t *testing.T) {
 	}
 }
 
-func DataBaseBatchInsertTest(db dataBase, t *testing.T) {
-	if err := db.ReConnect("./tmp"); err != nil {
+func DataBaseBatchInsertTest(db dataBase, path string, t *testing.T) {
+	if err := db.ReConnect(path); err != nil {
 		t.Fatalf("Couldn't open db: %s", err)
 	}
 

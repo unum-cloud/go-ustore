@@ -9,10 +9,10 @@ import (
 
 func TestDataBaseSimple(t *testing.T) {
 	db := ukv.CreateDB()
-	utest.DataBaseSimpleTest(&db, t)
+	utest.DataBaseSimpleTest(&db, "", t)
 }
 
 func TestDataBaseBatchInsert(t *testing.T) {
 	db := ukv.CreateDB()
-	utest.DataBaseBatchInsertTest(&db, t)
+	utest.DataBaseBatchInsertTest(&db, "", t)
 }
