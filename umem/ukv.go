@@ -1,7 +1,7 @@
 package ukv
 
 /*
-#cgo LDFLAGS: -L${SRCDIR}/../lib -lukv_embedded_umem -lstdc++
+#cgo LDFLAGS: -L${SRCDIR}/../lib -lumem_bundle -lm -lstdc++
 #cgo CFLAGS: -g -Wall -I${SRCDIR}/../../include
 
 #include "ukv/ukv.h"

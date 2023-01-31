@@ -1,7 +1,7 @@
 package ukv
 
 /*
-#cgo LDFLAGS: -L${SRCDIR}/../lib -lukv_embedded_leveldb -lleveldb -lstdc++
+#cgo LDFLAGS: -L${SRCDIR}/../lib -lleveldb_bundle -lstdc++
 #cgo CFLAGS: -g -Wall -I${SRCDIR}/../../include
 
 #include "ukv/ukv.h"
