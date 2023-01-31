@@ -15,7 +15,7 @@ echo "### Run Tests"
 go test ./...
 echo "Module seems okay"
 
-echo "Change branch to origin/main on github"
+echo "Please change branch to origin/main on github"
 read -p "Ready (y)? " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
@@ -23,7 +23,7 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 1
 fi
 
-echo "Commit changed files related to this release"
+echo "Please commit changed files related to this release"
 read -p "Ready (y)? " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
