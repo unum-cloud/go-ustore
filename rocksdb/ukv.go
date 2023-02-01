@@ -1,7 +1,7 @@
 package ukv
 
 /*
-#cgo LDFLAGS: -L${SRCDIR}/../lib -lrocksdb_bundle -lm -lstdc++
+#cgo LDFLAGS: -L${SRCDIR}/../lib -lukv_rocksdb_bundle -lm -lstdc++
 #cgo CFLAGS: -g -Wall -I${SRCDIR}/../../include
 
 #include "ukv/ukv.h"
